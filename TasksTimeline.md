@@ -8,7 +8,7 @@
 
 <br>
 
- <li> Create github for jeopardy project </li>
+ <li> Create github and branches for jeopardy project </li>
 <ul>
     <li> Tuesday 9/16/25 </li>
 </ul>
@@ -22,72 +22,94 @@
 
 <br>
 
- <li> Understand how to use <a href = "https://www.geeksforgeeks.org/advance-java/introduction-to-jsp/#" >JSP</a></li>
+ <li> Understand how to use <a href = "https://www.geeksforgeeks.org/advance-java/introduction-to-jsp/#" >JSP</a> or other Java frameworks.</li>
 <ul>
-    <li> </li>
+    <li> Tuesday 9/23/25 </li>
 </ul>
 
 <br>
 
  <li> Create relational algebra to implement to MySql </li>
 <ul>
-    <li> </li>
+    <li> Thursday 9/25/25</li>
 </ul>
 
 <br>
 
  <li> Learn how to use MySql Workbench </li>
 <ul>
-    <li> </li>
+    <li> Thursday 10/2/25 </li>
 </ul>
+
 <br>
 
- <li> Figure out how to setup the backend Java code </li>
-<ul>
-    <li> </li>
+ <li> Create database</li>
+<ul> 
+    <li>Tuesday 10/14/25</li>
 </ul>
 
+<br>
+
+<li> <strong>Project Progress 1</strong></li>
+<ul> 
+    <li> Thursday 10/16/25</li>
+</ul>
 <br>
 
  <li> Code the backend code for question template</li>
  <ul>
-    <li> Make it so that the user can add their own things to it <li>
-    <li> </li>
+    <li> Make it so that the user can add their own things to it </li>
+    <li> Sunday 10/26/25</li>
  </ul>
 
 <br>
 
  <li> Code the backend code for answer template</li>
  <ul>
-    <li> </li>
+    <li> Sunday 11/2/25</li>
 </ul>
 
 <br>
 
  <li> Code the backend of the questionBoard</li>
  <ul>
-    <li> 
+    <li> Sunday 11/9/25</li> 
 </ul>
 
 <br> 
 
+ <li><strong> Project Progress 2</strong></li>
+<ul> 
+    <li> Thursday 11/1/25</li>
+</ul>
+
+<br>
+
+
  <li> Code for backend for QuestionPage</li>
  <ul>
-    <li> </li>
+    <li> Might possibly finish this before Project Progress 2</li>
+    <li> Sunday 11/16/25</li>
 </ul>
 
 <br>
 
  <li> Setup the frontend code </li>
 <ul>
-    <li> </li>
+    <li> Sunday 11/23/25</li>
 </ul>
 
 <br>
 
- <li> Link both ends</li>
+ <li> Link both ends and database</li>
 <ul>
-    <li> </li>
+    <li> Sunday 11/26/25</li>
 </ul>
 
+<br>
+
+ <li> Prepare everything for Project Demo</li>
+<ul> 
+    <li> Thursday 12/4/25</li>
+</ul>
 </ol>

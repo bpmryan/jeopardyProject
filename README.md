@@ -91,8 +91,5 @@ Database Design and Management project
 
 <br> 
 
-- Questions
-    - Is there a better method to have an editable question screen for each question?
-        - Tags?
-    - How to save user’s progress?
-    - How to save every question, answer, and setting on it?
+## Queries
+
