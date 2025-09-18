@@ -2,6 +2,8 @@
 Database Design and Management project 
 
 ## Features 
+- JavaFX 
+
 - Creator 
     - Should be able to 
         - Create questions and answers
@@ -83,13 +85,32 @@ Database Design and Management project
 
 <br>
 
-- Bonus
+- Bonus / Future ideas:
     - Animated scene that gives a check mark if answered correctly or X if incorrect
         - Family feud animation 
         - Host will have access to the option to give the check mark or X
     - Host can split screen answer and question
+    - Have a list of questions that each team answered correctly
+    - Have a way for the user to download their game as a file to play without the need for internet 
 
 <br> 
 
-## Queries
-
+## Queries & Actions to Manipulate the Data
+<ul>
+    <li> Scores for each team</li>
+        <ul> 
+            <li> Database that saves the amount of points per team in each game</li>
+        </ul>
+ </ul>
+ <ul>
+    <li> Number of categories and questions per category for the game</li>
+        <ul> 
+            <li> Database that stores the user's input on category and question</li>
+            <li> Use to create the questionBoard</li>
+        </ul>
+ </ul>
+    <ul>
+    <li> Questions and answers the user created in the templates</li>
+        <ul> 
+            <li> txt file that saves each one</li>
+   
