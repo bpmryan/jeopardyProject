@@ -2,7 +2,6 @@
 Database Design and Management project 
 
 ## Features 
-- JavaFX 
 
 - Creator 
     - Should be able to 
@@ -92,6 +91,7 @@ Database Design and Management project
     - Host can split screen answer and question
     - Have a list of questions that each team answered correctly
     - Have a way for the user to download their game as a file to play without the need for internet 
+    - Admin role to monitor what is being added to each jeopardy game.
 
 <br> 
 

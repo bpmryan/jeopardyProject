@@ -56,7 +56,7 @@
 </ul>
 <br>
 
- <li> Code the backend code for question template</li>
+ <li> Code the backend and frontend code for question template</li>
  <ul>
     <li> Make it so that the user can add their own things to it </li>
     <li> Sunday 10/26/25</li>
@@ -64,7 +64,7 @@
 
 <br>
 
- <li> Code the backend code for answer template</li>
+ <li> Code the backend and frontend code for answer template</li>
  <ul>
     <li> Sunday 11/2/25</li>
 </ul>
@@ -94,17 +94,14 @@
 
 <br>
 
- <li> Setup the frontend code </li>
+ <li> Setup the any unfinished frontend code </li>
 <ul>
-    <li> Sunday 11/23/25</li>
+    <li> Link both ends and database</li>
+    <li> Sunday 11/26/25</li>
 </ul>
 
 <br>
 
- <li> Link both ends and database</li>
-<ul>
-    <li> Sunday 11/26/25</li>
-</ul>
 
 <br>
 
