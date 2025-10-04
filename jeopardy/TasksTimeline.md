@@ -34,18 +34,26 @@
     <li> Thursday 9/25/25</li>
 </ul>
 
-<br>
+<br> 
 
- <li> Learn how to use MySql Workbench </li>
-<ul>
-    <li> Thursday 10/2/25 </li>
+<li> Code the backend and frontend code for question template</li>
+ <ul>
+    <li> Make it so that the user can add their own things to it </li>
+    <li> Wednesday 10/15/25</li>
+ </ul>
+
+<!-- <br> -->
+
+ <li> Code the backend and frontend code for answer template</li>
+ <ul>
+    <li> Wednesday 10/15/25</li>
 </ul>
 
 <br>
 
- <li> Create database</li>
-<ul> 
-    <li>Tuesday 10/14/25</li>
+ <li> Code the backend of the questionBoard</li>
+ <ul>
+    <li> Wednesday 10/15/25</li> 
 </ul>
 
 <br>
@@ -56,26 +64,18 @@
 </ul>
 <br>
 
- <li> Code the backend and frontend code for question template</li>
- <ul>
-    <li> Make it so that the user can add their own things to it </li>
-    <li> Sunday 10/26/25</li>
- </ul>
-
-<br>
-
- <li> Code the backend and frontend code for answer template</li>
- <ul>
-    <li> Sunday 11/2/25</li>
+<li> Learn how to use MySql Workbench </li>
+<ul>
+    <li> Thursday 10/2/25 </li>
 </ul>
 
 <br>
 
- <li> Code the backend of the questionBoard</li>
- <ul>
-    <li> Sunday 11/9/25</li> 
+ <li> Create database</li>
+<ul> 
+    <li>Tuesday 10/14/25</li>
 </ul>
-
+ 
 <br> 
 
  <li><strong> Project Progress 2</strong></li>
