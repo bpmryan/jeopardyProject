@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="657.0" prefWidth="676.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.jeopardyapp.QuestionController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="TNTT Jeopardy" />
+    <HBox prefHeight="100.0" prefWidth="200.0">
+        <children>
+            <FlowPane prefHeight="69.0" prefWidth="35.0" />
+            <Label prefHeight="59.0" prefWidth="75.0" text="Label" />
+            <FlowPane prefHeight="65.0" prefWidth="49.0" />
+            <Label layoutX="45.0" layoutY="10.0" prefHeight="59.0" prefWidth="75.0" text="Label" />
+            <FlowPane layoutX="120.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Label layoutX="169.0" layoutY="10.0" prefHeight="59.0" prefWidth="75.0" text="Label" />
+            <FlowPane layoutX="244.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Label layoutX="293.0" layoutY="10.0" prefHeight="59.0" prefWidth="75.0" text="Label" />
+            <FlowPane layoutX="368.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Label layoutX="417.0" layoutY="10.0" prefHeight="59.0" prefWidth="75.0" text="Label" />
+        </children>
+    </HBox>
+    <HBox prefHeight="92.0" prefWidth="368.0">
+        <children>
+            <FlowPane layoutX="457.0" layoutY="10.0" prefHeight="69.0" prefWidth="35.0" />
+            <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$100" />
+            <FlowPane prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$100" />
+            <FlowPane layoutX="85.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="85.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$100" />
+            <FlowPane layoutX="209.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="160.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$100" />
+            <FlowPane layoutX="333.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="235.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$100" />
+        </children>
+    </HBox>
+    <HBox prefHeight="100.0" prefWidth="200.0">
+        <children>
+            <FlowPane prefHeight="69.0" prefWidth="35.0" />
+            <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$200" />
+            <FlowPane prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$200" />
+            <FlowPane layoutX="120.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="85.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$200" />
+            <FlowPane layoutX="244.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="160.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$200" />
+            <FlowPane layoutX="368.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="235.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$200" />
+        </children>
+    </HBox>
+    <HBox prefHeight="100.0" prefWidth="200.0">
+        <children>
+            <FlowPane prefHeight="69.0" prefWidth="35.0" />
+            <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$300" />
+            <FlowPane prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$300" />
+            <FlowPane layoutX="120.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="85.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$300" />
+            <FlowPane layoutX="244.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="160.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$300" />
+            <FlowPane layoutX="368.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="235.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$300" />
+        </children>
+    </HBox>
+    <HBox prefHeight="100.0" prefWidth="200.0">
+        <children>
+            <FlowPane prefHeight="69.0" prefWidth="35.0" />
+            <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$400" />
+            <FlowPane layoutX="160.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$400" />
+            <FlowPane layoutX="235.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="85.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$400" />
+            <FlowPane layoutX="310.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="160.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$400" />
+            <FlowPane prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="235.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$400" />
+        </children>
+    </HBox>
+    <HBox prefHeight="100.0" prefWidth="200.0">
+        <children>
+            <FlowPane prefHeight="69.0" prefWidth="35.0" />
+            <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$500" />
+            <FlowPane layoutX="160.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$500" />
+            <FlowPane layoutX="235.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="85.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$500" />
+            <FlowPane layoutX="310.0" layoutY="10.0" prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="160.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$500" />
+            <FlowPane prefHeight="65.0" prefWidth="49.0" />
+            <Button layoutX="235.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="75.0" text="\$500" />
+        </children>
+    </HBox>
+    <Button fx:id="finalJeopardyButton" onAction="#finalJeopardyButtonClick" prefHeight="75.0" prefWidth="105.0" text="Final Jeopardy" />
+</VBox>
