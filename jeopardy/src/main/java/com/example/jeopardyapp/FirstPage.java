@@ -8,6 +8,14 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class FirstPage extends Application {
+    // FirstPage opens questionPage.fxml
+
+    /*
+     * This should be the place that the creator can add categories and questions
+     * per category
+     * 
+     * Both templates should be able to save the question and answer to a file
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(FirstPage.class.getResource("questionPage.fxml"));
