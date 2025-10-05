@@ -74,7 +74,7 @@ public class QuestionController {
             grid.getRowConstraints().add(rc);
         }
 
-        //Make it so that the user can change the font's colors and size, and also the color of the background
+        // TODO: Make it so that the user can change the font's colors and size, and also the color of the background
 
         // Header labels (Category 1..N)
         for (int c = 0; c < categories; c++) {
@@ -139,7 +139,7 @@ public class QuestionController {
         int categories = catSel != null ? catSel : 5;
         int questionsPerCategory = qSel != null ? qSel : 5;
 
-        // Open in a NEW window (Stage) as requested
+        // Open in a NEW window (Stage) 
         openDynamicBoardWindow(categories, questionsPerCategory);
 
         // Optionally keep the original window open; if you want to switch windows instead, uncomment below:

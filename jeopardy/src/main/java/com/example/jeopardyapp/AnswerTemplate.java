@@ -1,4 +1,4 @@
-package com.example.jeopardyapp;
+ package com.example.jeopardyapp;
 
 import java.io.IOException;
 
@@ -9,9 +9,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import com.example.FileSaver;
+
 public class AnswerTemplate{
 
-    @FXML private Button returnQuestonBoardButton; // note the fx:id typo in FXML
+    @FXML 
+    private Button returnQuestonBoardButton; // note the fx:id typo in FXML
+    @FXML
+    private Button saveAnswer;
+
 
     private Stage stage;
 

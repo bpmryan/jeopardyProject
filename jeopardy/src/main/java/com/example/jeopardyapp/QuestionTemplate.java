@@ -9,14 +9,35 @@ import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+
+// import that allows us to access the saveToFile method
+import com.example.FileSaver;
 
 public class QuestionTemplate {
 
-    @FXML private TextField categoryTextField;
-    @FXML private TextField pointValueTextField;
-    @FXML private Button returnQuestionBoardButton;
-    @FXML private Button revealAnswerButton;
+    /*
+     * This is where the user will input the question.
+     * It should be saved into some sort of file
+     * There should be a save button that sends the text to a file that goes to the
+     * database.
+     * 
+     */
+
+    @FXML
+    private TextField categoryTextField;
+    @FXML
+    private TextField pointValueTextField;
+    @FXML
+    private TextField questionText;
+    @FXML
+    private Button returnQuestionBoardButton;
+    @FXML
+    private Button revealAnswerButton;
+    @FXML
+    private Button saveQuestion;
 
     private String category;
     private int pointValue;
@@ -45,6 +66,16 @@ public class QuestionTemplate {
         if (pointValueTextField != null) {
             pointValueTextField.setText("$" + value);
         }
+
+        // saves the questions to the userQnA.txt file along with what category and value it has
+        if (saveQuestion != null) {
+            saveQuestion.setOnAction(e -> {
+                String question = questionText.getText();
+                if (question != null && !question.trim().isEmpty()) {
+                    FileSaver.saveQuestion(category, pointValue, question);
+                }
+            });
+        }
     }
 
     // Allow caller to pass the Stage reference (useful for closing)
@@ -52,7 +83,7 @@ public class QuestionTemplate {
         this.stage = stage;
     }
 
-    // Method to close window 
+    // Method to close window
     private void closeWindow() {
         if (stage == null) {
             // fallback: try to get stage from any button
@@ -67,10 +98,10 @@ public class QuestionTemplate {
 
     private void openAnswerWindow() {
         try {
-            FXMLLoader loader = new FXMLLoader(FirstPage.class.getResource("answerTemplate.fxml")); //pulls up the answerTemplate in a new window
+            FXMLLoader loader = new FXMLLoader(FirstPage.class.getResource("answerTemplate.fxml")); // pulls up answerTemplate in a new window
             Parent root = loader.load();
             AnswerTemplate controller = loader.getController();
-            controller.setCategoryAndValue(category, pointValue); //fills in the question value and category
+            controller.setCategoryAndValue(category, pointValue); // fills in the question value and category
 
             Stage answerStage = new Stage();
             controller.setStage(answerStage);

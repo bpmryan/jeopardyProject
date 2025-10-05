@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jeopardyapp.QuestionController">
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jeopardyapp.QuestionController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -17,5 +17,5 @@
     <HBox prefHeight="0.0" prefWidth="130.0" />
     <Label text="How many questions per category?" />
     <ComboBox fx:id="questionCombo" prefWidth="200.0" />
-    <Button fx:id="submitButton" onAction="#submitButtonClick" text="Submit" />
+    <Button fx:id="moveOnButton" onAction="#submitButtonClick" text="Move on" />
 </VBox>
