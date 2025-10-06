@@ -1,4 +1,4 @@
- package com.example.jeopardyapp;
+package com.example.jeopardyapp;
 
 import java.io.IOException;
 
@@ -7,17 +7,23 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import com.example.FileSaver;
+import com.example.jeopardyapp.catVal;
 
-public class AnswerTemplate{
 
-    @FXML 
+
+public class AnswerTemplate {
+
+    @FXML
     private Button returnQuestonBoardButton; // note the fx:id typo in FXML
     @FXML
     private Button saveAnswer;
 
+    @FXML
+    private TextField answerText;
 
     private Stage stage;
 
@@ -26,6 +32,24 @@ public class AnswerTemplate{
         if (returnQuestonBoardButton != null) {
             returnQuestonBoardButton.setOnAction(e -> closeWindow());
         }
+
+        
+    }
+
+    // Init method for catVal
+    private catVal categoryInfo;
+    public void setCategoryAndValue(catVal categoryInfo) {
+        this.categoryInfo = categoryInfo;
+
+        // saves the answers to userQnA.txt 
+        if (saveAnswer != null) {
+            saveAnswer.setOnAction(e -> {
+                String answer = answerText.getText();
+                if (answer != null && !answer.trim().isEmpty()) {
+                    FileSaver.saveAnswer(categoryInfo.getCategory(), categoryInfo.getValue(), answer);
+                }
+            });
+        }
     }
 
     public void setStage(Stage stage) {
@@ -33,28 +57,30 @@ public class AnswerTemplate{
     }
 
     public void setCategoryAndValue(String category, int value) {
-        // If you later add fx:id fields for category/value in the answer FXML, populate them here.
+        // If you later add fx:id fields for category/value in the answer FXML, populate
+        // them here.
     }
 
-    // to return user to the questionTemplate 
-    private void returnToQuestionTemplate(){
-        closeWindow();
-        try{
-            FXMLLoader loader = new FXMLLoader(FirstPage.class.getResource("questionTemplate.fxml"));
-            Parent root = loader.load();
-            QuestionTemplate controller = loader.getController(); 
+    // // to return user to the questionTemplate
+    // private void returnToQuestionTemplate(){
+    // closeWindow();
+    // try{
+    // FXMLLoader loader = new
+    // FXMLLoader(FirstPage.class.getResource("questionTemplate.fxml"));
+    // Parent root = loader.load();
+    // QuestionTemplate controller = loader.getController();
 
-            Stage questionStage = new Stage();
-            controller.setStage(questionStage);
-            questionStage.setTitle("Question");
-            questionStage.setScene(new Scene(root));
-            questionStage.show();
-        } catch (IOException ex) {
-        ex.printStackTrace();
-        }
-    }
-    
-    // closes current window 
+    // Stage questionStage = new Stage();
+    // controller.setStage(questionStage);
+    // questionStage.setTitle("Question");
+    // questionStage.setScene(new Scene(root));
+    // questionStage.show();
+    // } catch (IOException ex) {
+    // ex.printStackTrace();
+    // }
+    // }
+
+    // closes current window
     private void closeWindow() {
         if (stage == null) {
             if (returnQuestonBoardButton != null) {
