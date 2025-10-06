@@ -1,10 +1,1 @@
-Category: Category 3, Value: $200, Q: What is the programming language used on this app?
-Category: Category 3, Value: $200, Q: What is the programming language used on this app?
-Category: Category 3, Value: $200, Q: What is the programming language used on this app?
-Category: Category 3, Value: $200, Q: What is the programming language used on this app?
-Category: Category 3, Value: $200, Q: What is the programming language used on this app?
-Category: Category 3, Value: $200, Q: What is the programming language used on this app?
-Category: Category 3, Value: $200, Q: What is the programming language used on this app?
-Category: Category 3, Value: $200, Q: What is the programming language used on this app?
-Category: Category 3, Value: $200, Q: What is the programming language used on this app?
-Category: Category 3, Value: $200, Q: What is the programming language used on this app?
+

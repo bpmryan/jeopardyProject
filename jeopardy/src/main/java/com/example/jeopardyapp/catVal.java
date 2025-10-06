@@ -1,5 +1,6 @@
 package com.example.jeopardyapp;
 
+
 public class catVal {
     private String category;
     private int value;
