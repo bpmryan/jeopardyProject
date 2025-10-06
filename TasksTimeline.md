@@ -36,25 +36,31 @@
 
 <br> 
 
-<li> Code the backend and frontend code for question template</li>
+<li> Find a way to save question data to a txt file</li>
  <ul>
-    <li> Make it so that the user can add their own things to it </li>
-    <li> Wednesday 10/15/25</li>
+    <li> Sunday 10/5/25</li>
  </ul>
 
-<!-- <br> -->
+<br> 
 
- <li> Code the backend and frontend code for answer template</li>
+<li> Find a way to save answer data to a txt file</li>
  <ul>
-    <li> Wednesday 10/15/25</li>
-</ul>
+    <li> Wednesday 10/8/25</li>
+ </ul>
 
 <br>
 
- <li> Code the backend of the questionBoard</li>
+<li> Find a way to save category name and point value data to a txt file for each question and answer</li>
  <ul>
-    <li> Wednesday 10/15/25</li> 
-</ul>
+    <li> Sunday 10/12/25</li>
+ </ul>
+
+<br>
+
+<li> Code any unfinished backend and frontend code for templates</li>
+ <ul>
+    <li> Wednesday 10/15/25</li>
+ </ul>
 
 <br>
 
@@ -62,46 +68,45 @@
 <ul> 
     <li> Thursday 10/16/25</li>
 </ul>
+
 <br>
 
-<li> Learn how to use MySql Workbench </li>
+<li>Create the game presentation display</li>
 <ul>
-    <li> Thursday 10/2/25 </li>
+    <li>Should have a button on the grid fxml to change display from editor -> game presentation </li>
+    <li>Should display all creator changes that are saved from the userQnA.txt or whenever I create the database.</li>
+    <li>Either do it during Fall Break or finsh by Sunday 10/26/25</li>
 </ul>
 
 <br>
 
- <li> Create database</li>
-<ul> 
-    <li>Tuesday 10/14/25</li>
+<li> Learn how to use MySql Workbench and create database (possibly)</li>
+<ul>
+    <li> Thursday 10/23/25 </li>
+    <li> Create database by Tuesday 11/4/25
 </ul>
- 
+
 <br> 
+
+ <li> Create user authentication</li>
+<ul> 
+    <li>Sunday 11/9/25</li>
+</ul>
+
+<br>
 
  <li><strong> Project Progress 2</strong></li>
 <ul> 
-    <li> Thursday 11/1/25</li>
+    <li> Thursday 11/11/25</li>
 </ul>
 
 <br>
 
-
- <li> Code for backend for QuestionPage</li>
- <ul>
-    <li> Might possibly finish this before Project Progress 2</li>
-    <li> Sunday 11/16/25</li>
-</ul>
-
-<br>
-
- <li> Setup the any unfinished frontend code </li>
+ <li> Setup the any unfinished frontend code and deploy desktop app.</li>
 <ul>
     <li> Link both ends and database</li>
     <li> Sunday 11/26/25</li>
 </ul>
-
-<br>
-
 
 <br>
 

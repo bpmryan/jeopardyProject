@@ -13,36 +13,32 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
 
-
 import java.io.IOException;
+
+// Access to catVal class
+import com.example.jeopardyapp.catVal;
 
 public class QuestionController {
 
     private Stage stage;
 
-    @FXML
-    private Label welcomeText;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
-
-    //Opens the final jeopardy question
+    // Opens the final jeopardy question
     public void finalJeopardyButtonClick(ActionEvent actionEvent) {
     }
 
     // Inputs from questionPage.fxml
     // The ComboBox<Integer> are field declarations for each combo box
-    @FXML private javafx.scene.control.ComboBox<Integer> categoryCombo; // number of categories
-    @FXML private javafx.scene.control.ComboBox<Integer> questionCombo; // number of questions per category
+    @FXML
+    private javafx.scene.control.ComboBox<Integer> categoryCombo; // number of categories
+    @FXML
+    private javafx.scene.control.ComboBox<Integer> questionCombo; // number of questions per category
 
     @FXML
     // Setup continuation for combo boxes
     // each combo has a list of Integers for the user to choose from
     // What the user selects generates the next scene
     public void initialize() {
-        //this creates the combo box choices (the numbers) for each question
+        // this creates the combo box choices (the numbers) for each question
         if (categoryCombo != null) {
             categoryCombo.getItems().setAll(5, 6, 7, 8);
             categoryCombo.getSelectionModel().select(Integer.valueOf(5));
@@ -55,7 +51,8 @@ public class QuestionController {
 
     // New: Build and show a dynamic Jeopardy board in a new window
     private void openDynamicBoardWindow(int categories, int questionsPerCategory) {
-        // GridPane with (categories) columns and (questionsPerCategory + 1) rows (top row = category headers)
+        // GridPane with (categories) columns and (questionsPerCategory + 1) rows (top
+        // row = category headers)
         GridPane grid = new GridPane();
         grid.setHgap(10);
         grid.setVgap(10);
@@ -74,7 +71,8 @@ public class QuestionController {
             grid.getRowConstraints().add(rc);
         }
 
-        // TODO: Make it so that the user can change the font's colors and size, and also the color of the background
+        // TODO: Make it so that the user can change the font's colors and size, and
+        // also the color of the background
 
         // Header labels (Category 1..N)
         for (int c = 0; c < categories; c++) {
@@ -91,12 +89,13 @@ public class QuestionController {
             for (int c = 0; c < categories; c++) {
                 Button cell = new Button("$" + value);
                 cell.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-                cell.setStyle("-fx-font-size: 14; -fx-font-weight: bold; -fx-background-color: #123b8b; -fx-text-fill: #ffd700;");
+                cell.setStyle(
+                        "-fx-font-size: 14; -fx-font-weight: bold; -fx-background-color: #123b8b; -fx-text-fill: #ffd700;");
                 // On click: open question window for this category/value and disable button
                 final int colIndex = c;
                 cell.setOnAction(e -> {
-                    String categoryName = "Category " + (colIndex + 1);
-                    openQuestionWindow(categoryName, value, (Stage) ((Button) e.getSource()).getScene().getWindow());
+                    catVal categoryInfo = new catVal("Category " + (colIndex + 1), value);
+                    openQuestionWindow(categoryInfo, (Stage) ((Button) e.getSource()).getScene().getWindow());
                     cell.setDisable(true);
                 });
                 grid.add(cell, c, r);
@@ -111,15 +110,15 @@ public class QuestionController {
         boardStage.show();
     }
 
-    private void openQuestionWindow(String categoryName, int pointValue, Stage owner) {
+    private void openQuestionWindow(catVal categoryInfo, Stage owner) {
         try {
             FXMLLoader loader = new FXMLLoader(FirstPage.class.getResource("questionTemplate.fxml"));
             javafx.scene.Parent root = loader.load();
             QuestionTemplate controller = loader.getController();
             Stage questionStage = new Stage();
-            controller.setCategoryAndValue(categoryName, pointValue);
+            controller.setCategoryInfo(categoryInfo);
             controller.setStage(questionStage);
-            questionStage.setTitle(categoryName + " - $" + pointValue);
+            questionStage.setTitle(categoryInfo.getCategory() + " - $" + categoryInfo.getValue());
             questionStage.setScene(new Scene(root));
             if (owner != null) {
                 questionStage.initOwner(owner);
@@ -131,7 +130,7 @@ public class QuestionController {
         }
     }
 
-    //opens the Question Board scene from selections
+    // opens the Question Board scene from selections
     public void submitButtonClick(javafx.event.ActionEvent ActionEvent) throws IOException {
         // Determine selections from ComboBoxes; default to 5 if not chosen
         Integer catSel = categoryCombo != null ? categoryCombo.getSelectionModel().getSelectedItem() : null;
@@ -139,10 +138,11 @@ public class QuestionController {
         int categories = catSel != null ? catSel : 5;
         int questionsPerCategory = qSel != null ? qSel : 5;
 
-        // Open in a NEW window (Stage) 
+        // Open in a NEW window (Stage)
         openDynamicBoardWindow(categories, questionsPerCategory);
 
-        // Optionally keep the original window open; if you want to switch windows instead, uncomment below:
-         ((Stage) ((Node) ActionEvent.getSource()).getScene().getWindow()).close();
+        // Optionally keep the original window open; if you want to switch windows
+        // instead, uncomment below:
+        ((Stage) ((Node) ActionEvent.getSource()).getScene().getWindow()).close();
     }
 }
