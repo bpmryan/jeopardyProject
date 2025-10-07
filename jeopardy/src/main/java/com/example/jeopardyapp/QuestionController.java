@@ -15,8 +15,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-// Access to catVal class
-import com.example.jeopardyapp.catVal;
 
 public class QuestionController {
 
@@ -94,7 +92,7 @@ public class QuestionController {
                 // On click: open question window for this category/value and disable button
                 final int colIndex = c;
                 cell.setOnAction(e -> {
-                    catVal categoryInfo = new catVal("Category " + (colIndex + 1), value);
+                    CatVal categoryInfo = new CatVal("Category " + (colIndex + 1), value);
                     openQuestionWindow(categoryInfo, (Stage) ((Button) e.getSource()).getScene().getWindow());
                     cell.setDisable(true);
                 });
@@ -110,7 +108,7 @@ public class QuestionController {
         boardStage.show();
     }
 
-    private void openQuestionWindow(catVal categoryInfo, Stage owner) {
+    private void openQuestionWindow(CatVal categoryInfo, Stage owner) {
         try {
             FXMLLoader loader = new FXMLLoader(FirstPage.class.getResource("questionTemplate.fxml"));
             javafx.scene.Parent root = loader.load();

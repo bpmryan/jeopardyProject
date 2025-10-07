@@ -1,11 +1,11 @@
 package com.example.jeopardyapp;
 
 
-public class catVal {
+public class CatVal {
     private String category;
     private int value;
 
-    public catVal(String category, int value) {
+    public CatVal(String category, int value) {
         this.category = category;
         this.value = value;
     }

@@ -10,8 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import com.example.FileSaver;
-import com.example.jeopardyapp.catVal;
 
 
 
@@ -37,8 +35,8 @@ public class AnswerTemplate {
     }
 
     // Init method for catVal
-    private catVal categoryInfo;
-    public void setCategoryAndValue(catVal categoryInfo) {
+    private CatVal categoryInfo;
+    public void setCategoryAndValue(CatVal categoryInfo) {
         this.categoryInfo = categoryInfo;
 
         // saves the answers to userQnA.txt 
@@ -46,7 +44,7 @@ public class AnswerTemplate {
             saveAnswer.setOnAction(e -> {
                 String answer = answerText.getText();
                 if (answer != null && !answer.trim().isEmpty()) {
-                    FileSaver.saveAnswer(categoryInfo.getCategory(), categoryInfo.getValue(), answer);
+                    FileSaver.saveAnswerMethod(categoryInfo, answer);
                 }
             });
         }
@@ -56,10 +54,24 @@ public class AnswerTemplate {
         this.stage = stage;
     }
 
-    public void setCategoryAndValue(String category, int value) {
-        // If you later add fx:id fields for category/value in the answer FXML, populate
-        // them here.
-    }
+    // closes current window
+    private void closeWindow() {
+        if (stage == null) {
+            if (returnQuestonBoardButton != null) {
+                Stage s = (Stage) returnQuestonBoardButton.getScene().getWindow();
+                s.close();
+                return;
+            }
+        }
+        stage.close();
+    } 
+
+    // Unused / junk code for future reference
+
+    // public void setCategoryAndValue(String category, int value) {
+    //     // If you later add fx:id fields for category/value in the answer FXML, populate
+    //     // them here.
+    // }
 
     // // to return user to the questionTemplate
     // private void returnToQuestionTemplate(){
@@ -80,15 +92,5 @@ public class AnswerTemplate {
     // }
     // }
 
-    // closes current window
-    private void closeWindow() {
-        if (stage == null) {
-            if (returnQuestonBoardButton != null) {
-                Stage s = (Stage) returnQuestonBoardButton.getScene().getWindow();
-                s.close();
-                return;
-            }
-        }
-        stage.close();
-    }
+    
 }

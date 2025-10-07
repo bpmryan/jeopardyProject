@@ -60,6 +60,7 @@
 <li> Code any unfinished backend and frontend code for templates</li>
  <ul>
     <li> Wednesday 10/15/25</li>
+    <li> Create a overwrite method and check for user to save the things in each template once in UserQnA.txt
  </ul>
 
 <br>
@@ -74,7 +75,7 @@
 <li>Create the game presentation display</li>
 <ul>
     <li>Should have a button on the grid fxml to change display from editor -> game presentation </li>
-    <li>Should display all creator changes that are saved from the userQnA.txt or whenever I create the database.</li>
+    <li>Should display all creator changes that are saved from the UserQnA.txt or whenever I create the database.</li>
     <li>Either do it during Fall Break or finsh by Sunday 10/26/25</li>
 </ul>
 
