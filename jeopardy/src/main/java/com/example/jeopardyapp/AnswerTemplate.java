@@ -34,7 +34,7 @@ public class AnswerTemplate {
         
     }
 
-    // Init method for catVal
+    // Initialize method for catVal
     private CatVal categoryInfo;
     public void setCategoryAndValue(CatVal categoryInfo) {
         this.categoryInfo = categoryInfo;

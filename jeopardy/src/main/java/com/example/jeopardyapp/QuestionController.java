@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
@@ -24,6 +25,21 @@ public class QuestionController {
     public void finalJeopardyButtonClick(ActionEvent actionEvent) {
     }
 
+    // opens the Question Board scene from selections
+    public void submitButtonClick(javafx.event.ActionEvent ActionEvent) throws IOException {
+        // Determine selections from ComboBoxes; default to 5 if not chosen
+        Integer catSel = categoryCombo != null ? categoryCombo.getSelectionModel().getSelectedItem() : null;
+        Integer qSel = questionCombo != null ? questionCombo.getSelectionModel().getSelectedItem() : null;
+        int categories = catSel != null ? catSel : 5;
+        int questionsPerCategory = qSel != null ? qSel : 5;
+
+        // Open in a NEW window (Stage)
+        openDynamicBoardWindow(categories, questionsPerCategory);
+
+        // Optionally keep the original window open; if you want to switch windows instead, uncomment below:
+        ((Stage) ((Node) ActionEvent.getSource()).getScene().getWindow()).close();
+    }
+
     // Inputs from questionPage.fxml
     // The ComboBox<Integer> are field declarations for each combo box
     @FXML
@@ -31,11 +47,18 @@ public class QuestionController {
     @FXML
     private javafx.scene.control.ComboBox<Integer> questionCombo; // number of questions per category
 
+    // way to save user input category names
+    @FXML
+    private TextField userCategoryInput;
+    @FXML
+    private Button saveCategoryButton;
+
     @FXML
     // Setup continuation for combo boxes
     // each combo has a list of Integers for the user to choose from
     // What the user selects generates the next scene
     public void initialize() {
+
         // this creates the combo box choices (the numbers) for each question
         if (categoryCombo != null) {
             categoryCombo.getItems().setAll(5, 6, 7, 8);
@@ -45,9 +68,22 @@ public class QuestionController {
             questionCombo.getItems().setAll(5, 6, 7, 8);
             questionCombo.getSelectionModel().select(Integer.valueOf(5));
         }
+
+        // Way for user input category names
+        // TextField userCategoryInput = new TextField();
+        // userCategoryInput.setPromptText("Enter category name");
+        // Button saveCategoryButton = new Button("Save Category");
+
+        // saveCategoryButton.setOnAction(e -> {
+        //     String categoryName = userCategoryInput.getText();
+        //     if(categoryName != null && !categoryName.trim().isEmpty()){
+        //         // Calls FileSaver.java saveUserCategory method and writes to UserQnA.txt file
+        //         FileSaver.saveUserCategory(categoryName);
+        //     }
+        // });
     }
 
-    // New: Build and show a dynamic Jeopardy board in a new window
+    // Method that dynamically builds the jeopardy board based off user selections in questionPage.fxml
     private void openDynamicBoardWindow(int categories, int questionsPerCategory) {
         // GridPane with (categories) columns and (questionsPerCategory + 1) rows (top
         // row = category headers)
@@ -69,14 +105,14 @@ public class QuestionController {
             grid.getRowConstraints().add(rc);
         }
 
-        // TODO: Make it so that the user can change the font's colors and size, and
-        // also the color of the background
-
+        // Place for user to change the category names 
         // Header labels (Category 1..N)
         for (int c = 0; c < categories; c++) {
             Label header = new Label("Category " + (c + 1));
             header.setStyle("-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16; -fx-alignment: center;");
             header.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+            // grid.add(userCategoryInput, 0, categories + 1, categories, 1);
+            // grid.add(saveCategoryButton, 0, categories + 2, categories, 1);
             grid.add(header, c, 0);
         }
 
@@ -89,12 +125,17 @@ public class QuestionController {
                 cell.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
                 cell.setStyle(
                         "-fx-font-size: 14; -fx-font-weight: bold; -fx-background-color: #123b8b; -fx-text-fill: #ffd700;");
+                
                 // On click: open question window for this category/value and disable button
                 final int colIndex = c;
                 cell.setOnAction(e -> {
                     CatVal categoryInfo = new CatVal("Category " + (colIndex + 1), value);
                     openQuestionWindow(categoryInfo, (Stage) ((Button) e.getSource()).getScene().getWindow());
-                    cell.setDisable(true);
+
+
+                    // get rid of this function once you know how to separate the user view vs game presentation
+                    // different txt file that saves which question has been answered and by which team 
+                    // cell.setDisable(true);
                 });
                 grid.add(cell, c, r);
             }
@@ -128,19 +169,5 @@ public class QuestionController {
         }
     }
 
-    // opens the Question Board scene from selections
-    public void submitButtonClick(javafx.event.ActionEvent ActionEvent) throws IOException {
-        // Determine selections from ComboBoxes; default to 5 if not chosen
-        Integer catSel = categoryCombo != null ? categoryCombo.getSelectionModel().getSelectedItem() : null;
-        Integer qSel = questionCombo != null ? questionCombo.getSelectionModel().getSelectedItem() : null;
-        int categories = catSel != null ? catSel : 5;
-        int questionsPerCategory = qSel != null ? qSel : 5;
-
-        // Open in a NEW window (Stage)
-        openDynamicBoardWindow(categories, questionsPerCategory);
-
-        // Optionally keep the original window open; if you want to switch windows
-        // instead, uncomment below:
-        ((Stage) ((Node) ActionEvent.getSource()).getScene().getWindow()).close();
-    }
+    
 }

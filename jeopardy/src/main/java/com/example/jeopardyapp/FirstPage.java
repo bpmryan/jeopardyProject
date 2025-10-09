@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 public class FirstPage extends Application {
@@ -26,6 +27,11 @@ public class FirstPage extends Application {
     }
 
     public static void main(String[] args) {
+        CatVal newCat = new CatVal("Geography", 200);
+        FileSaver.saveQuestionMethod(newCat, "Paris?");
+        FileSaver.saveAnswerMethod(newCat, "France");
         launch();
+
+        
     }
 }

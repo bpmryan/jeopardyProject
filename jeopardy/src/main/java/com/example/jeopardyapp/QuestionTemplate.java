@@ -63,9 +63,7 @@ public class QuestionTemplate {
             pointValueTextField.setText("$" + categoryInfo.getValue());
         }
 
-        // saves the questions to the userQnA.txt file along with what category and
-        // value it has
-
+        // saves the questions to the userQnA.txt file along with what category and value it has
         if (saveQuestion != null) {
             saveQuestion.setOnAction(e -> {
                 String question = questionText.getText();
@@ -79,7 +77,7 @@ public class QuestionTemplate {
     // When user is opening the answer window
     // controller.setCategoryAndValue(this.categoryInfo);
 
-    // Allow caller to pass the Stage reference (useful for closing)
+    // Allow caller to pass the Stage reference
     public void setStage(Stage stage) {
         this.stage = stage;
     }
@@ -99,9 +97,9 @@ public class QuestionTemplate {
 
     private void openAnswerWindow() {
         try {
-            FXMLLoader loader = new FXMLLoader(FirstPage.class.getResource("answerTemplate.fxml")); // pulls up
-                                                                                                    // answerTemplate in
-                                                                                                    // a new window
+            
+            // pulls up answerTemplate in a new window
+            FXMLLoader loader = new FXMLLoader(FirstPage.class.getResource("answerTemplate.fxml")); 
             Parent root = loader.load();
             AnswerTemplate controller = loader.getController();
 
