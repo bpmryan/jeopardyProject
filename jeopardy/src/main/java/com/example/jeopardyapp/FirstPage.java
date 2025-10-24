@@ -27,9 +27,10 @@ public class FirstPage extends Application {
     }
 
     public static void main(String[] args) {
-        CatVal newCat = new CatVal("Geography", 200);
-        FileSaver.saveQuestionMethod(newCat, "Paris?");
-        FileSaver.saveAnswerMethod(newCat, "France");
+        // Test saving to csv
+        // CatVal newCat = new CatVal("Geography", 200);
+        // FileSaver.saveQuestionMethod(newCat, "Paris?");
+        // FileSaver.saveAnswerMethod(newCat, "France");
         launch();
 
         
