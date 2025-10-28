@@ -16,7 +16,7 @@
             <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
          </padding>
          <children>
-            <Label style="-fx-text-fill: #ffd700; -fx-font-size: 20px; -fx-font-weight: bold;" text="Jeopardy Game Creator Center" />
+            <Label style="-fx-text-fill: #ffd700; -fx-font-size: 20px; -fx-font-weight: bold;" text="Jeopardy Game Creation Center" />
             <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
             <Button fx:id="btnPreview" mnemonicParsing="false" text="Preview Board" />
             <Button fx:id="btnSaveAll" mnemonicParsing="false" text="Save All" />
