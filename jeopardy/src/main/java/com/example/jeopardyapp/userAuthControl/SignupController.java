@@ -1,4 +1,4 @@
-package com.example.newproject2;
+package com.example.jeopardyapp.userAuthControl;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
