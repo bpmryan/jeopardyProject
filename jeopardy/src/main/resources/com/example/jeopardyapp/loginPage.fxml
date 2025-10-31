@@ -12,9 +12,9 @@
    <center>
       <VBox prefHeight="181.0" prefWidth="600.0" spacing="6.0" BorderPane.alignment="CENTER">
          <children>
-            <Label style="-fx-text-fill: #ffd700; -fx-font-size: 20px; -fx-font-family: sans-sariff;" text="Username:" />
+            <Label style="-fx-text-fill: #ffd700; -fx-font-weight: bold;" text="Username:" />
             <TextField fx:id="txtUsername" prefHeight="25.0" prefWidth="350.0" promptText="johndoe" />
-            <Label style="-fx-text-fill: #ffd700; -fx-font-size: 20px;" text="Password:" />
+            <Label style="-fx-text-fill: #ffd700; -fx-font-weight: bold;" text="Password:" />
             <TextField fx:id="txtPassword" promptText="*********" />
          </children>
          <padding>
