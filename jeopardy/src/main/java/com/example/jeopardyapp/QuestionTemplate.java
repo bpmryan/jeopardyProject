@@ -99,7 +99,7 @@ public class QuestionTemplate {
         try {
             
             // pulls up answerTemplate in a new window
-            FXMLLoader loader = new FXMLLoader(FirstPage.class.getResource("answerTemplate.fxml")); 
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("answerTemplate.fxml")); 
             Parent root = loader.load();
             AnswerTemplate controller = loader.getController();
 

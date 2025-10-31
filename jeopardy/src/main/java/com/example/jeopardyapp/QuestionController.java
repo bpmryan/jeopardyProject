@@ -151,7 +151,7 @@ public class QuestionController {
 
     private void openQuestionWindow(CatVal categoryInfo, Stage owner) {
         try {
-            FXMLLoader loader = new FXMLLoader(FirstPage.class.getResource("questionTemplate.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("questionTemplate.fxml"));
             javafx.scene.Parent root = loader.load();
             QuestionTemplate controller = loader.getController();
             Stage questionStage = new Stage();

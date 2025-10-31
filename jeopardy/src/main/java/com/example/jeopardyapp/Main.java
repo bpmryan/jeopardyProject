@@ -8,18 +8,15 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 
-public class FirstPage extends Application {
-    // FirstPage opens questionPage.fxml
+public class Main extends Application {
+    // Right now:  Main opens questionPage.fxml
 
     /*
-     * This should be the place that the creator can add categories and questions
-     * per category
-     * 
-     * Both templates should be able to save the question and answer to a file
+     * Main should open up user authentication 
      */
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(FirstPage.class.getResource("questionPage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("questionPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
         stage.setTitle("Question");
         stage.setScene(scene);
