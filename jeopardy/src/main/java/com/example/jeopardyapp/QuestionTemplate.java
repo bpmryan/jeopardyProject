@@ -13,10 +13,6 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-// import that allows us to access the saveToFile method
-import com.example.FileSaver;
-import com.example.jeopardyapp.catVal;
-
 public class QuestionTemplate {
 
     /*
@@ -44,7 +40,7 @@ public class QuestionTemplate {
     private Stage stage;
 
     // Init method for catVal
-    private catVal categoryInfo;
+    private CatVal categoryInfo;
 
     @FXML
     private void initialize() {
@@ -58,7 +54,7 @@ public class QuestionTemplate {
     }
 
     // Called by the code that opens this window to pass data
-    public void setCategoryInfo(catVal categoryInfo) {
+    public void setCategoryInfo(CatVal categoryInfo) {
         this.categoryInfo = categoryInfo;
         if (categoryTextField != null) {
             categoryTextField.setText(categoryInfo.getCategory());
@@ -67,22 +63,21 @@ public class QuestionTemplate {
             pointValueTextField.setText("$" + categoryInfo.getValue());
         }
 
-        // saves the questions to the userQnA.txt file along with what category and
-        // value it has
+        // saves the questions to the userQnA.txt file along with what category and value it has
         if (saveQuestion != null) {
             saveQuestion.setOnAction(e -> {
                 String question = questionText.getText();
                 if (question != null && !question.trim().isEmpty()) {
-                    FileSaver.saveQuestion(categoryInfo.getCategory(), categoryInfo.getValue(), question);
+                    FileSaver.saveQuestionMethod(categoryInfo, question);
                 }
             });
         }
     }
 
     // When user is opening the answer window
-    // controller.setCategoryAndValue(this.categoryInfo); 
+    // controller.setCategoryAndValue(this.categoryInfo);
 
-    // Allow caller to pass the Stage reference (useful for closing)
+    // Allow caller to pass the Stage reference
     public void setStage(Stage stage) {
         this.stage = stage;
     }
@@ -102,16 +97,14 @@ public class QuestionTemplate {
 
     private void openAnswerWindow() {
         try {
-            FXMLLoader loader = new FXMLLoader(FirstPage.class.getResource("answerTemplate.fxml")); // pulls up
-                                                                                                    // answerTemplate in
-                                                                                                    // a new window
+            
+            // pulls up answerTemplate in a new window
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("answerTemplate.fxml")); 
             Parent root = loader.load();
             AnswerTemplate controller = loader.getController();
-            controller.setCategoryAndValue(this.categoryInfo.getCategory(), this.categoryInfo.getValue()); // fills in
-                                                                                                           // the
-                                                                                                           // question
-                                                                                                           // value and
-                                                                                                           // category
+
+            // fills in the question/answer point value and category
+            controller.setCategoryAndValue(categoryInfo); 
 
             Stage answerStage = new Stage();
             controller.setStage(answerStage);
